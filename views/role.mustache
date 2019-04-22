@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<!-- styles -->
+		<link rel="stylesheet" type="text/css" href="/style.css">
+		<script>
+			function showRole() {
+				document.getElementById("roleimg").src = "{{roleimg}}"
+			}
+
+			var roundNum = {{roundNum}};
+			setInterval(function() {
+  				fetch("/roundNumber").then(function (res) {
+  					return res.json();
+  				}).then(function (roundRes) {
+    				if (roundRes.roundNum != roundNum) {
+      					location.reload()
+    				}
+  				})
+			}, 2000)
+
+		</script>
+	</head>
+
+	<body>
+		<div>
+			<img src="{{roundImg}}" id="roleimg" onclick="showRole();">
+		</div>
+		<!-- <button onclick="location.reload();">Get Next Role</button> -->
+	</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+  <head> 
+    <!-- styles -->
+    <link rel="stylesheet" type="text/css" href="/style.css">
+  </head>
+  
+  <body>
+      <img id="imgholder">
+      <div id="countdown">
+     <div id="countdown-number"></div>
+        <svg>
+         <circle r="36" cx="40" cy="40" id="timercircle"></circle>
+        </svg>
+    </div>
+    <!-- <p id="spaceInstructions" >
+      press space to contine
+    </p> -->
+    <script>
+      const countdown = document.getElementById("countdown");
+      const timer = document.getElementById("countdown-number");
+      const imgholder = document.getElementById("imgholder");
+      const spaceinstructions = document.getElementById("spaceInstructions");
+      const timercircle = document.getElementById("timercircle");
+      const screens = {{{screens}}};
+
+      let currentTime;
+      let interval;
+
+      function startTimer(duration) {
+        currentTime = duration;
+        timercircle.style.animation = "countdown " + duration + "s linear";
+        interval = setInterval(function(){
+          currentTime--;
+          displayTime();
+          if (currentTime == 0) {
+            stopTimer();
+          }
+        }, 1000)
+        displayTime();
+      }
+
+      function stopTimer() {
+        clearInterval(interval);
+      }
+
+      function displayTime() {
+        countdown.style.display = "block";
+        timer.innerText = currentTime
+      }
+
+      function clearTime() {
+        timer.innerText = ""
+        countdown.style.display = "none";
+      }
+
+      let screenNum = 0;
+      function showNextScreen(){
+        screenNum++;
+        if (screenNum < screens.length) {
+          showScreen();
+        } else {
+          window.location = "/round/{{next}}"
+        }
+      }
+      function showScreen() {
+        stopTimer();
+        clearTime();
+        if (screenNum == 7) startTimer(30);
+        else if(screenNum == 8 ) startTimer(180);
+        else if (screenNum == 9) startTimer(30);
+        imgholder.src = "/" + screens[screenNum];
+      }
+      window.onkeydown = function(evt) {
+        if (evt.key == " ") {
+          showNextScreen();
+        }
+      }
+      showScreen();
+    </script>
+  </body>
+</html>

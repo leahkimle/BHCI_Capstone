@@ -1,0 +1,82 @@
+/*********** enterName.html and nameEntered.html************/
+
+#phonebackground {
+    width: 125%;
+    height: auto;
+    float: left;
+    position: relative;
+}
+
+#inputname {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translate(-50%, 50%);
+}
+
+.enternametext {
+    font-family: Avenir-Roman;
+    font-size: 1.45vw;
+    color: #FFFFFF;
+    letter-spacing: 0;
+}
+#inputbox {
+    font-family: Avenir-Roman;
+    font-size: 1.35vw;
+}
+
+#joinbutton {
+    font-family: Avenir-Roman;
+    font-size: 1.35vw;
+    color: #1A4BCF;
+    background: #FFDC73;
+    border-radius: 10px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*********** round.mustache (Timer) ************/
+
+svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+svg circle {
+    stroke-dasharray: 226px;
+    stroke-dashoffset: 0px;
+    stroke-linecap: round;
+    stroke-width: 2px;
+    stroke: white;
+    fill: none;
+}
+
+@keyframes countdown {
+    from {
+      stroke-dashoffset: 0px;
+  }
+  to {
+      stroke-dashoffset: 226px;
+  }
+}
+
+#countdown {
+    position: absolute;
+    top: 15%;
+    right: 15%;
+    text-align: center;
+    height: 80px;
+    width: 80px;
+}
+
+#countdown-number {
+    color: white;
+    display: inline-block;
+    line-height: 80px;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <!-- styles -->
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <script>
+    	window.onkeydown = function(evt) {
+    		if (evt.key == " ") {
+    			window.location = "/intro/{{next}}"
+    		}
+    	}
+    </script>
+  </head>
+
+  <body>
+    <div>
+      <img src="/{{imageUrl}}">
+    </div>
+    <!-- <p>
+     press space to contine
+    </p> -->
+  </body>
+</html>
