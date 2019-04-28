@@ -1,7 +1,7 @@
 /*********** enterName.html and nameEntered.html************/
 
 #phonebackground {
-    width: 125%;
+    width: 100%;
     height: auto;
     float: left;
     position: relative;
@@ -9,32 +9,68 @@
 
 #inputname {
     position: absolute;
-    top: 10%;
-    left: 10%;
+    top: 15%;
+    left: 50%;
     transform: translate(-50%, 50%);
 }
 
 .enternametext {
-    font-family: Avenir-Roman;
-    font-size: 1.45vw;
+    font-family: Karla;
+    font-size: 6.5vw;
     color: #FFFFFF;
     letter-spacing: 0;
 }
+
 #inputbox {
-    font-family: Avenir-Roman;
-    font-size: 1.35vw;
+    font-family: Karla;
+    font-size: 6.5vw;
 }
 
 #joinbutton {
-    font-family: Avenir-Roman;
-    font-size: 1.35vw;
+    font-family: Karla;
+    font-size: 6.5vw;
     color: #1A4BCF;
     background: #FFDC73;
     border-radius: 10px;
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
+}
+
+/*********** start.mustache (First Screen) ************/
+#tvwelcomeimage {
+    width: 100%;
+    height: auto;
+    float: left;
+    position: relative;
+}
+
+#howtojointext {
+    position: absolute;
+    margin-left: 5%;
+    font-family: Karla;
+    font-size: 1.5vw;
+    color: #FFFFFF;
+}
+
+/*********** players.mustache ************/
+
+#blankname {
+    width: 100%;
+    height: auto;
+    float: left;
+    position: relative;
+}
+
+#namelist {
+    position: absolute;
+    font-family: Karla;
+    font-size: 3.2vw;
+    color: #1A4BCF;
+    letter-spacing: 0;
+    margin-left:62%;
+    margin-top: 15.5%;
 }
 
 /*********** round.mustache (Timer) ************/
@@ -79,4 +115,6 @@ svg circle {
     color: white;
     display: inline-block;
     line-height: 80px;
+    font-family: Karla;
+    font-size: 30px;
 }

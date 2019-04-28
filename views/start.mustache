@@ -3,24 +3,27 @@
   <head>
     <!-- styles -->
     <link rel="stylesheet" type="text/css" href="/style.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
     <script>
       window.onkeydown = function(evt) {
        if (evt.key == " ") {
         window.location = "/players"
       }
     }
-  </script>
+    </script>
   </head>
 
   <body>
     <div>
-      <img src="tv_welcome.png">
+      <img id="tvwelcomeimage" src="tv_welcome.png">
     </div>
     <!-- <p>
       press space to contine
     </p> -->
-    <p>
-      navigate to {{host}} on your phone to join the game
+    <p id="howtojointext">
+      Type <u>{{host}}</u> in a browser on your phone to join the game
     </p>
   </body>
 </html>

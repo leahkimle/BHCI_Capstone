@@ -3,6 +3,9 @@
   <head>
     <!-- styles -->
     <link rel="stylesheet" type="text/css" href="/style.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
     <script>
       window.onkeydown = function(evt) {
         if (evt.key == " ") {
@@ -11,19 +14,22 @@
      }
       setInterval(function() {
                 location.reload()
-      }, 2000)
+      }, 1000)
    </script>
   </head>
 
   <body>
     <div>
-      <ol>
-        {{#users}}
-        <li>
-          {{.}}
-        </li>
-        {{/users}}
-      </ol>
+      <img id="blankname" src="tv1_blanknames.png">
+      <div id="namelist">
+        <ol>
+          {{#users}}
+          <li>
+            {{.}}
+          </li>
+          {{/users}}
+        </ol>
+      </div>
     </div>
     <!-- <p>
       press space to contine
